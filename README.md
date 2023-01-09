@@ -84,6 +84,8 @@ Two brands were also created with possible ids of `1` and `2` respectively. Whil
 - `name`: The name of the category (string, required)
 
 
+*[NOTE]*: All the routes above requires an ADMIN role to access them. Token should be passed in the request headers with the format `token <user-token-here>` example `token Lshjsy773bsnab==`
+
 ### User routes
 **http://localhost:3000/api/auth/signup** - **POST** Creates a new user. Required fields:
 - `username` : Username of the user (string, required)

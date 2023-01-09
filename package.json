@@ -2,16 +2,16 @@
   "name": "food-court",
   "version": "0.1.0",
   "private": true,
-  "type": "module", 
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint", 
+    "lint": "next lint",
     "migrate": "yarn knex migrate:latest --knexfile ./lib/db/knexfile.js",
     "migrate:down": "yarn knex migrate:down --knexfile ./lib/db/knexfile.js",
     "seed:make": "yarn knex seed:make dev --knexfile ./lib/db/knexfile.js",
-    "seed:run": "yarn knex seed:run --knexfile ./lib/db/knexfile.js --esm" 
+    "seed:run": "yarn knex seed:run --knexfile ./lib/db/knexfile.js --esm"
   },
   "dependencies": {
     "@next/font": "13.1.1",
