@@ -13,9 +13,8 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
   } = req;
 
   try {
-      
-    if(!name) return res.status(401).json({message: "Name not provided"});
-    
+    if (!name) return res.status(401).json({ message: "Name not provided" });
+
     const brand = await Brand.query().findById(brandId!);
 
     if (!brand)

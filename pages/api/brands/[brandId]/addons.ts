@@ -60,7 +60,7 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
         res.status(401).json({ message: "Unknown method." });
     }
   } catch (err) {
-   res.status(500).json({message: "An error occurred, try again later"});
+    res.status(500).json({ message: "An error occurred, try again later" });
   }
 }
 

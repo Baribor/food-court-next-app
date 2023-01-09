@@ -36,6 +36,6 @@ export default async function handler(
       .status(200)
       .json({ message: "sign up successfully", token: token.token });
   } catch (err) {
-    res.status(500).json({message: "An error occurred, try again later"});
+    res.status(500).json({ message: "An error occurred, try again later" });
   }
 }
