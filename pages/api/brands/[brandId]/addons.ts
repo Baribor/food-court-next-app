@@ -48,7 +48,7 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
           .withGraphFetched("addons");
 
         if (!brand) {
-          return res.status(500).json({ message: "Brand not found" });
+          return res.status(401).json({ message: "Brand not found" });
         }
 
         return res.status(200).json({
@@ -57,10 +57,10 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
         });
 
       default:
-        res.status(400).json({ message: "Unknown method." });
+        res.status(401).json({ message: "Unknown method." });
     }
   } catch (err) {
-    res.status(500).json(err);
+   res.status(500).json({message: "An error occurred, try again later"});
   }
 }
 

@@ -10,8 +10,7 @@ async function handler(req: AuthNextApiRequest, res: NextApiResponse) {
 
     res.status(200).json({ message: "successfully logout" });
   } catch (err) {
-    console.log(err);
-    res.status(400).json(err);
+    res.status(500).json({message:"An error occurred, try again later"});
   }
 }
 

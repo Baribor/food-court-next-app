@@ -9,11 +9,6 @@ class Brand extends Model {
     return "brand";
   }
 
-  async getAddons() {
-    const AddOn = require("/lib/db/models/addon");
-    const addons = await AddOn.query().where("id", "=");
-  }
-
   static get jsonSchema() {
     return {
       type: "object",

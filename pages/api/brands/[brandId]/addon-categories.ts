@@ -13,6 +13,9 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
   } = req;
 
   try {
+      
+    if(!name) return res.status(401).json({message: "Name not provided"});
+    
     const brand = await Brand.query().findById(brandId!);
 
     if (!brand)
@@ -36,10 +39,9 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
         .json({ message: "Category created successfully.", category: cat });
     }
 
-    res.status(400).json({ message: "Method not applicable." });
+    res.status(401).json({ message: "Method not applicable." });
   } catch (err) {
-    res.status(500).json(err);
-    throw err;
+    return res.status(500).json(err);
   }
 }
 

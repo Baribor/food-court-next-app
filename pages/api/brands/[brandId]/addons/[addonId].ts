@@ -63,11 +63,10 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
           .json({ message: "Addon deleted", addon: removedAddon });
 
       default:
-        res.status(400).json({ message: "Unknown request method." });
+        res.status(401).json({ message: "Unknown request method." });
     }
   } catch (err) {
-    res.status(500).json(err);
-    throw err;
+    res.status(500).json({message:"An error occurred try again later"});
   }
 }
 

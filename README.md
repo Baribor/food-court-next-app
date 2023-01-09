@@ -104,7 +104,7 @@ On success returns a `token` to be added to the headers of restricted routes.
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-To verify that your app wouldn't crash doing deployment, run:
+To verify that your app wouldn't crash during deployment, run:
 ```
 yarn run build
 ```
