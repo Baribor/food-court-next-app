@@ -108,3 +108,6 @@ yarn run build
 ```
 
 Check out the [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+## Live APP
+[https://food-court-next-app.vercel.app/](https://food-court-next-app.vercel.app/)
